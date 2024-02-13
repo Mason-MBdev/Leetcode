@@ -3,11 +3,11 @@ int maximumWealth(int** accounts, int accountsSize, int* accountsColSize) {
     // Init max wealth
     int max_monies = 0;
     
-    // Traverse all customers 
+    // Traverse all i customers
     for (int i = 0 ; i < accountsSize ; i++){
         int monies = 0;
         
-        // Calculate customer balance accross all banks
+        // Calculate i-th customer balance accross all associated j banks
         for (int j = 0 ; j < *accountsColSize ; j++){
             monies += accounts[i][j];
         }
@@ -19,3 +19,5 @@ int maximumWealth(int** accounts, int accountsSize, int* accountsColSize) {
     }
     return max_monies;
 }
+
+
